@@ -1,13 +1,20 @@
 #include <iostream>
 
+//If you add "using namespace std", you can just write cout instead of std::cout when calling
+//the operator cout defined in the namespace std.
 using namespace std;
 
 class Var;
 
 class Base {
 public:
+//A virtual method or function is a method or function whose behavior can be overridden by
+//within an inheriting class by a function of the same signature.
+//A tilde is the bitwise negation operator. When applied to a function definition, it means that the function will do
+//the opposite of what it says it will do.
   virtual ~Base() {};
   virtual const Base *clone() = 0;
+//const=constant
   virtual const Base *d(const string &v) const = 0;
   virtual ostream &print(ostream &o) const = 0;
 };
